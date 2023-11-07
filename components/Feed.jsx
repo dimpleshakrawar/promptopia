@@ -5,26 +5,24 @@ import { useSession } from "next-auth/react";
 import PromptCard from "./PromptCard";
 import Loading from "./Loading";
 
-interface Post {
-  _id: string;
-}
+// interface Post {
+//   _id: string;
+// }
 
-interface PromptCardListProps {
-  data: Post[] | undefined;
-  handleTagClick: (value: string) => void;
-}
+// interface PromptCardListProps {
+//   data: Post[] | undefined;
+//   handleTagClick: (value: string) => void;
+// }
 
-const PromptCardList = ({ data, handleTagClick }: PromptCardListProps) => {
+const PromptCardList = ({ data, handleTagClick }) => {
   return (
     <div className="mt-16 prompt_layout">
       {data?.map((post) => (
-        <>
-          <PromptCard
-            key={post._id}
-            post={post}
-            handleTagClick={handleTagClick}
-          />
-        </>
+        <PromptCard
+          key={post._id}
+          post={post}
+          handleTagClick={handleTagClick}
+        />
       ))}
     </div>
   );
@@ -32,11 +30,11 @@ const PromptCardList = ({ data, handleTagClick }: PromptCardListProps) => {
 
 function Feed() {
   const { data: session } = useSession();
-  const [searchText, setSearchText] = useState<string>("");
+  const [searchText, setSearchText] = useState < string > "";
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
-  const searchApiByTagEvent = async (value: string) => {
+  const searchApiByTagEvent = async (value) => {
     setLoading(true);
     try {
       const response = await fetch(`/api/prompt/posts/${value}`);
@@ -47,8 +45,9 @@ function Feed() {
       console.log(err);
     }
   };
+  //: React.ChangeEvent<HTMLInputElement>
 
-  const handleSearchChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = async (e) => {
     if (!e.target.value) fetchPosts();
 
     setSearchText(e.target.value);
