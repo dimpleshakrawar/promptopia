@@ -1,27 +1,20 @@
 import Loading from "./Loading";
 import PromptCard from "./PromptCard";
 
-interface Post {
-  _id: string;
-}
+// interface Post {
+//   _id: string;
+// }
 
-interface IProfileProps {
-  name: string;
-  desc: string;
-  handleEdit: (tag: object) => void;
-  handleDelete: (tag: object) => void;
-  data: Post[];
-  loading: boolean;
-}
+// interface IProfileProps {
+//   name: string;
+//   desc: string;
+//   handleEdit: (tag: object) => void;
+//   handleDelete: (tag: object) => void;
+//   data: Post[];
+//   loading: boolean;
+// }
 
-const Profile = ({
-  name,
-  desc,
-  data,
-  handleEdit,
-  handleDelete,
-  loading,
-}: IProfileProps) => {
+const Profile = ({ name, desc, data, handleEdit, handleDelete, loading }) => {
   return (
     <section className="w-full">
       <h1 className="head_text text-left">

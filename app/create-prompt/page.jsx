@@ -49,5 +49,3 @@ export default function CreatePrompt() {
     />
   );
 }
-
-//I am going to give you a piece of code and you tell me how to write it more efficiently and efficiently.
