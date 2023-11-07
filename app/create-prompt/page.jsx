@@ -14,7 +14,9 @@ export default function CreatePrompt() {
     tag: "",
   });
 
-  const createNewPrompt = async (e: React.FormEvent<HTMLFormElement>) => {
+  //React.FormEvent<HTMLFormElement>
+
+  const createNewPrompt = async (e) => {
     e.preventDefault();
     setSubmitting(true);
 

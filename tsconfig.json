@@ -31,7 +31,8 @@
     "utils/database.js",
     "app/api/auth/[...nextauth]/route.js",
     "app/profile/page.jsx",
-    "components/PromptCard.jsx"
+    "components/PromptCard.jsx",
+    "app/create-prompt/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

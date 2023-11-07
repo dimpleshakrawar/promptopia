@@ -24,7 +24,7 @@ const MyProfile = () => {
     };
 
     if (session?.user?.id) fetchPosts();
-  }, [session?.user?.id]);
+  }, [session?.user?.id, setLoading]);
 
   const handleEdit = (post) => {
     router.push(`/update-prompt?id=${post._id}`);
