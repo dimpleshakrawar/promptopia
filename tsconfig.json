@@ -33,7 +33,8 @@
     "components/Profile.jsx",
     "components/Feed.jsx",
     "app/api/auth/[...nextauth]/route.js",
-    "utils/database.js"
+    "utils/database.js",
+    "app/create-prompt/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
