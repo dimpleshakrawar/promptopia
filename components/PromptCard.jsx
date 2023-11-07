@@ -7,41 +7,36 @@ import { usePathname, useRouter } from "next/navigation";
 import tick from "@/utils/assets/icons/tick.svg";
 import copy from "@/utils/assets/icons/copy.svg";
 
-type Creator = {
-  _id: string;
-  image: string;
-  username?: string;
-  email?: string;
-};
+// type Creator = {
+//   _id: string;
+//   image: string;
+//   username?: string;
+//   email?: string;
+// };
 
-interface Post {
-  _id: string;
-  prompt?: string;
-  tag?: string;
-  creator?: Creator;
-}
+// interface Post {
+//   _id: string;
+//   prompt?: string;
+//   tag?: string;
+//   creator?: Creator;
+// }
 
-interface PromptCardProps {
-  post: Post;
-  handleTagClick?: (value: string) => void;
-  handleEdit?: (e: any) => void;
-  handleDelete?: (e: any) => void;
-}
+// interface PromptCardProps {
+//   post: Post;
+//   handleTagClick?: (value: string) => void;
+//   handleEdit?: (e: any) => void;
+//   handleDelete?: (e: any) => void;
+// }
 
-const PromptCard = ({
-  post,
-  handleTagClick,
-  handleEdit,
-  handleDelete,
-}: PromptCardProps) => {
+const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
   const pathName = usePathname();
   const router = useRouter();
-  const [copied, setCopied] = useState<string | undefined>("");
+  const [copied, setCopied] = (useState < string) | (undefined > "");
 
   const handleCopy = () => {
     setCopied(post.prompt);
-    navigator.clipboard.writeText(post.prompt as string);
+    navigator.clipboard.writeText(post.prompt);
     setTimeout(() => setCopied(""), 3000);
   };
 
@@ -80,7 +75,7 @@ const PromptCard = ({
         <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
         <p
           className="font-inter text-sm blue_gradient cursor-pointer"
-          onClick={() => handleTagClick && handleTagClick(post.tag as string)}
+          onClick={() => handleTagClick && handleTagClick(post.tag)}
         >
           #{post.tag}
         </p>
