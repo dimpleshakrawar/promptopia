@@ -11,7 +11,7 @@ const MyProfile = () => {
   const userName = searchParams.get("name");
   const { data: session } = useSession();
   const router = useRouter();
-  const [loading, setLoading] = useState < boolean > false;
+  const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {

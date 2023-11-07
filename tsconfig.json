@@ -28,13 +28,12 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "utils/database.js",
-    "app/api/auth/[...nextauth]/route.js",
     "app/profile/page.jsx",
     "components/PromptCard.jsx",
-    "app/create-prompt/page.jsx",
+    "components/Profile.jsx",
     "components/Feed.jsx",
-    "components/Profile.jsx"
+    "app/api/auth/[...nextauth]/route.js",
+    "utils/database.js"
   ],
   "exclude": ["node_modules"]
 }

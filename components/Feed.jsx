@@ -30,7 +30,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
 
 function Feed() {
   const { data: session } = useSession();
-  const [searchText, setSearchText] = useState < string > "";
+  const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
